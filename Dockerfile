@@ -1,8 +1,7 @@
-FROM apache/httpd:latest
+FROM nginx:alpine
 
-COPY . /usr/local/apache2/htdocs/
+# Copy all files from current directory to Nginx html directory
+COPY . /usr/share/nginx/html
 
+# Expose port 80
 EXPOSE 80
-
-CMD ["httpd", "-D", "FOREGROUND"]
-
