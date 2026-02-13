@@ -173,6 +173,10 @@ img {
   height: auto;
 }
 
+[link] {
+  cursor: pointer;
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1120px;

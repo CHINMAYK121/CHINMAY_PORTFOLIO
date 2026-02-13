@@ -110,3 +110,15 @@ cards.forEach(card => {
     card.style.setProperty('--mouse-y', `${y}px`);
   });
 });
+
+/*=============== LINK ATTRIBUTE HANDLING ===============*/
+const linkedElements = document.querySelectorAll('[link]');
+
+linkedElements.forEach(element => {
+  element.addEventListener('click', () => {
+    const link = element.getAttribute('link');
+    if (link) {
+      window.open(link, '_blank');
+    }
+  });
+});
